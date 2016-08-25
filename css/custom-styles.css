@@ -68,7 +68,6 @@ button::-moz-focus-inner {
 }
 input, input:hover, input:active, input:focus {
     outline: none;
-    border: none;
 }
 textarea, textarea:hover, textarea:active, textarea:focus {
     outline: none;
@@ -112,8 +111,8 @@ img {
 }
 
 .container {
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 6%;
+    padding-bottom: 6%;
 }
 
 .to-order {
@@ -127,28 +126,166 @@ img {
     font-family: 'OpenSans Bold', sans-serif;
     color: #ffffff;
     border: 1px solid #007fff;
-    width: 350px;
-    height: 80px;
     font-size: 24px;
+    padding: 20px 50px;
 }
 .to-order:hover {
     color: #007fff;
-    border: 1px solid #ffffff;
+    border: 1px solid #007fff;
     background-color: #ffffff;
 }
 .to-order:active {
     color: #ff0000;
 }
 
-.form-field::-webkit-input-placeholder {font-family: 'Roboto Light', sans-serif; opacity: 1; color: #000000;}
-.form-field::-moz-placeholder {font-family: 'Roboto Light', sans-serif; opacity: 1; color: #000000;}
-.form-field:-moz-placeholder {font-family: 'Roboto Light', sans-serif; opacity: 1; color: #000000;}
-.form-field:-ms-input-placeholder {font-family: 'Roboto Light', sans-serif; opacity: 1; color: #000000;}
+.form-field-wrap {
+    display: inline-block;
+    width: 270px;
+    height: 40px;
+    margin: 0 10px 15px 0;
+}
+.form-field {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #d0d0d0;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font-family: 'OpenSans Regular', sans-serif;
+    font-size: 15px;
+    padding: 0 20px;
+}
+
+.form-field::-webkit-input-placeholder {font-family: 'OpenSans Regular', sans-serif; opacity: 1; color: #091726;}
+.form-field::-moz-placeholder {font-family: 'OpenSans Regular', sans-serif; opacity: 1; color: #091726;}
+.form-field:-moz-placeholder {font-family: 'OpenSans Regular', sans-serif; opacity: 1; color: #091726;}
+.form-field:-ms-input-placeholder {font-family: 'OpenSans Regular', sans-serif; opacity: 1; color: #091726;}
 
 .form-field:focus::-webkit-input-placeholder {color: transparent;}
 .form-field:focus::-moz-placeholder {color: transparent;}
 .form-field:focus:-moz-placeholder {color: transparent;}
 .form-field:focus:-ms-input-placeholder {color: transparent;}
+
+.custom-select {
+    display: inline-block;
+    width: 270px;
+    height: 40px;
+    margin: 0 10px 10px 0;
+    background-color: #ffffff;
+    position: relative;
+    border: 1px solid #d0d0d0;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.custom-select .current-value {
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    line-height: 38px;
+    padding-left: 30px;
+    cursor: pointer;
+    vertical-align: middle;
+    position: relative;
+}
+.custom-select .current-value span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 15px;
+    -webkit-box-shadow: -1px -1px 2px 0 rgba(0,0,0,0.25), 1px 1px 2px 0 rgba(0,0,0,0.25);
+    -moz-box-shadow: -1px -1px 2px 0 rgba(0,0,0,0.25), 1px 1px 2px 0 rgba(0,0,0,0.25);
+    box-shadow: -1px -1px 2px 0 rgba(0,0,0,0.25), 1px 1px 2px 0 rgba(0,0,0,0.25);
+    margin: 10px 20px 13px 0;
+}
+.custom-select .current-value:after {
+    content: '\25BC';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+}
+.custom-select .current-value.active:after {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+.custom-select ul {
+    display: none;
+    width: 270px;
+    background-color: #ffffff;
+    position: absolute;
+    right: -1px;
+    top: 38px;
+    z-index: 1;
+    padding: 5px 15px;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #d0d0d0;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.custom-select ul li {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    line-height: 38px;
+    padding-left: 65px;
+    position: relative;
+    overflow: hidden;
+    font-size: 15px;
+}
+.custom-select ul li span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 15px;
+    -webkit-box-shadow: -1px -1px 2px 0 rgba(0,0,0,0.25), 1px 1px 2px 0 rgba(0,0,0,0.25);
+    -moz-box-shadow: -1px -1px 2px 0 rgba(0,0,0,0.25), 1px 1px 2px 0 rgba(0,0,0,0.25);
+    box-shadow: -1px -1px 2px 0 rgba(0,0,0,0.25), 1px 1px 2px 0 rgba(0,0,0,0.25);
+    margin: 10px 20px 13px 0;
+    position: absolute;
+    top: 0;
+    left: -100px;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+}
+.flag-russia {
+    background: transparent url('../source/content/flag-russia.png') no-repeat center;
+    background-size: cover;
+}
+.flag-ukraine {
+    background: transparent url('../source/content/flag-ukraine.png') no-repeat center;
+    background-size: cover;
+}
+.flag-kazahstan {
+    background: transparent url('../source/content/flag-kazahstan.png') no-repeat center;
+    background-size: cover;
+}
+.custom-select ul li:hover span {
+    left: 15px;
+}
+.custom-select ul li:hover {
+    color: #ff0000;
+}
+.custom-checkbox-wrap, .custom-checkbox {
+    display: inline-block;
+    font-size: 13px;
+    vertical-align: middle;
+}
 
 .validatr-message {
     display: none;
@@ -173,7 +310,7 @@ header[role="banner"] {
     background-color: gray;
     position: relative;
 }
-header[role="banner"] .container, footer[role="contentinfo"] .container {
+header[role="banner"] .container {
     padding-top: 0;
     padding-bottom: 0;
 }
@@ -292,7 +429,7 @@ header .to-order {
 .advantages-list-1 {
     background-image: url('../source/content/background-advantages.png');
     background-repeat: no-repeat;
-    background-position: center 200px;
+    background-position: center 230px;
     background-size: auto;
     padding-bottom: 5%;
 }
@@ -403,18 +540,18 @@ header .to-order {
 .to-buy-now-1 p, .to-buy-now-1 span {
     font-family: 'OpenSans Light', sans-serif;
 }
-.to-buy-now-1 .product-cost {
+.product-cost {
     font-family: 'OpenSans Bold', sans-serif;
     font-size: 36px;
 }
-.to-buy-now-1 .old-cost {
+.old-cost {
     display: block;
     font-family: 'OpenSans Light', sans-serif;
     font-size: 24px;
     color: #4d4d4d;
     text-decoration: line-through;
 }
-.to-buy-now-1 .current-cost {
+.current-cost {
     font-family: 'OpenSans Bold', sans-serif;
     font-size: 36px;
     color: #ff0000;
@@ -461,19 +598,25 @@ header .to-order {
 .how-buy .container .row>div:first-child p {
     font-family: 'OpenSans Regular', sans-serif;
 }
-.how-buy .analogs span {
+.how-buy .analogs a {
     display: inline-block;
     vertical-align: middle;
     width: 20px;
     height: 20px;
     background-color: #007fff;
     color: #ffffff;
+    border: 1px solid #007fff;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
     text-align: center;
     font-family: 'OpenSans Bold', sans-serif;
     line-height: 20px;
+}
+.how-buy .analogs a:hover {
+    background-color: #ffffff;
+    color: #007fff;
+    text-decoration: none;
 }
 
 /* reviews */
@@ -482,4 +625,131 @@ header .to-order {
     margin-bottom: 5px;
     text-align: center;
     font-family: 'OpenSans Light', sans-serif;
+}
+
+/* for-whom */
+
+.for-whom-1 p, .for-whom-2 p, .for-whom-3 p, .for-whom-4 p {
+    font-family: 'OpenSans Light', sans-serif;
+}
+.for-whom-1 .row>div:last-child, .for-whom-3 .row>div:last-child {
+    padding-left: 3%;
+}
+.for-whom-2 .row>div:first-child, .for-whom-4 .row>div:first-child {
+    padding-right: 3%;
+}
+.for-whom-1 .to-order, .for-whom-3 .to-order, .for-whom-2 .to-order, .for-whom-4 .to-order {
+    padding: 15px 30px;
+}
+
+/* to-buy-now-2 */
+
+.to-buy-now-2 {
+    background: transparent url('../source/content/to-buy-now-2.png') no-repeat 105% center;
+    background-size: auto 100%;
+}
+.to-buy-now-2 h2 {
+    margin-bottom: 0;
+}
+.to-buy-now-2 form:after {
+    content: '';
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 20px 0;
+}
+.to-buy-now-2 .old-cost {
+    display: inline-block;
+    font-size: 24px;
+}
+.to-buy-now-2 .current-cost, .to-buy-now-2 .product-cost {
+    font-family: 'OpenSans SemiBold', sans-serif;
+    font-size: 24px;
+}
+.to-buy-now-2 .to-order {
+    padding: 15px 40px;
+    margin: 10px 20px 0 0;
+}
+.order-info {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 10px;
+}
+.order-info p {
+    margin: 0;
+}
+.order-info p:first-child {
+    font-size: 13px;
+}
+.order-info p:last-child {
+    font-family: 'OpenSans Light', sans-serif;
+    font-size: 19px;
+}
+.order-info .current-sum {
+    font-family: 'OpenSans Bold', sans-serif;
+    font-size: 22px;
+}
+.to-buy-now-2 ul {
+    margin: 20px 0;
+}
+.to-buy-now-2 ul li, .to-buy-now-2 ul li + p {
+    display: block;
+    font-family: 'OpenSans Light', sans-serif;
+}
+
+/* how-we-work */
+
+.how-we-work {
+    text-align: center;
+}
+.how-we-work ul {
+    margin-top: 4%;
+}
+.how-we-work ul li {
+    vertical-align: top;
+    width: 255px;
+    margin: 20px 10px;
+}
+.how-we-work ul li img {
+    width: 50px;
+    margin: 0 auto 30px;
+}
+.how-we-work ul li p {
+    font-family: 'OpenSans Light', sans-serif;
+}
+
+/* footer */
+
+footer[role="contentinfo"] {
+    background-color: #0a141f;
+}
+footer .container {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.company-details {
+    float: left;
+}
+.company-details div {
+    display: inline-block;
+    font-family: 'OpenSans Light', sans-serif;
+    color: #ffffff;
+    font-size: 15px;
+    margin-right: 10px;
+}
+.company-details .company-name {
+    font-family: 'OpenSans Bold', sans-serif;
+}
+.markello, .our-email {
+    display: inline-block;
+    float: right;
+    color: #ffffff;
+}
+.our-email {
+    text-decoration: underline;
+    margin-right: 20px;
+}
+.our-email:hover {
+    text-decoration: none;
 }
