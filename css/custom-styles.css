@@ -126,6 +126,9 @@ img {
     font-family: 'OpenSans Bold', sans-serif;
     color: #ffffff;
     border: 1px solid #007fff;
+    width: 350px;
+    height: 80px;
+    font-size: 24px;
 }
 .to-order:hover {
     color: #007fff;
@@ -148,6 +151,10 @@ img {
 
 .validatr-message {
     display: none;
+}
+
+.color-background {
+    background-color: #f5faff;
 }
 
 .invalid-field {
@@ -218,9 +225,6 @@ nav ul li a:hover {
     padding-top: 8%;
 }
 header .to-order {
-    width: 350px;
-    height: 80px;
-    font-size: 24px;
     margin-right: 50px;
 }
 .no-blender, .no-juicer {
@@ -258,7 +262,9 @@ header .to-order {
 /* advantages-list-1 */
 
 .advantages-list-1 {
-    background: #f5faff url('../source/content/background-advantages.png') no-repeat center 200px;
+    background-image: url('../source/content/background-advantages.png');
+    background-repeat: no-repeat;
+    background-position: center 200px;
     background-size: auto;
     padding-bottom: 5%;
 }
@@ -301,7 +307,7 @@ header .to-order {
 
 /* advantages-video */
 
-.advantages-video {
+.advantages-video .row {
     background-color: #f5faff;
 }
 .advantages-video .container {
@@ -341,9 +347,28 @@ header .to-order {
 
 /*  cocktails */
 
-.cocktails {
-    background-color: #f5faff;
-}
 .cocktails h2, .cocktails p {
     padding-left: 3%;
+}
+
+/* to-buy-now-1 */
+
+.to-buy-now-1 img {
+    width: 80%;
+}
+.to-buy-now-1 .product-cost {
+    font-family: 'OpenSans Bold', sans-serif;
+    font-size: 36px;
+}
+.to-buy-now-1 .old-cost {
+    display: block;
+    font-family: 'OpenSans Light', sans-serif;
+    font-size: 24px;
+    color: #4d4d4d;
+    text-decoration: line-through;
+}
+.to-buy-now-1 .current-cost {
+    font-family: 'OpenSans Bold', sans-serif;
+    font-size: 36px;
+    color: #ff0000;
 }
