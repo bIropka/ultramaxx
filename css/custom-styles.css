@@ -12,7 +12,7 @@
 }
 @font-face {
     font-family: 'OpenSans SemiBold';
-    src: url("../source/fonts/OpenSans-SemiBold.woff") format("woff"), url("../source/fonts/OpenSans-SemiBold.ttf") format("truetype");
+    src: url("../source/fonts/OpenSans-Semibold.woff") format("woff"), url("../source/fonts/OpenSans-Semibold.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
 }
@@ -75,7 +75,7 @@ textarea, textarea:hover, textarea:active, textarea:focus {
     border: none;
 }
 
-ul li {
+ul li, ol li {
     display: inline-block;
     vertical-align: middle;
     list-style: none;
@@ -86,6 +86,7 @@ h1 {
     font-size: 56px;
     color: rgba(255, 255, 255, 1);
     font-weight: 100;
+    margin: 0 0 3% 0;
 }
 h2 {
     font-family: 'OpenSans Bold', sans-serif;
@@ -170,13 +171,22 @@ img {
 header[role="banner"] {
     height: 100vh;
     background-color: gray;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    position: relative;
 }
 header[role="banner"] .container, footer[role="contentinfo"] .container {
     padding-top: 0;
     padding-bottom: 0;
+}
+.header-top {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.header-top .container {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 }
 .our-logo {
     display: block;
@@ -188,6 +198,12 @@ header[role="banner"] .container, footer[role="contentinfo"] .container {
 }
 .header-bottom {
     background-color: #091726;
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
 }
 .header-bottom .out-logo {
     margin: 10px 0;
@@ -221,8 +237,16 @@ nav ul li a:hover {
     margin-top: 18px;
 }
 .header-banner {
-    border-top: 1px solid rgba(255, 255, 255, 0.6);
-    padding-top: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 header .to-order {
     margin-right: 50px;
@@ -244,12 +268,13 @@ header .to-order {
     vertical-align: middle;
     width: 35px;
     height: 33px;
-    background: transparent url('../source/images/sprite-white.png') no-repeat left center;
+    background: transparent url('../source/images/icon-white-1.png') no-repeat center;
     background-size: cover;
     margin-right: 10px;
 }
 .no-juicer:before {
-    background-position: right center;
+    background: transparent url('../source/images/icon-white-2.png') no-repeat center;
+    background-size: cover;
     margin-left: 20px;
 }
 
@@ -257,6 +282,9 @@ header .to-order {
 
 .unique-helper h2, .unique-helper p {
     padding-left: 3%;
+}
+.unique-helper p {
+    font-family: 'OpenSans Light', sans-serif;
 }
 
 /* advantages-list-1 */
@@ -279,6 +307,7 @@ header .to-order {
     margin-bottom: 5%;
     padding-left: 40px;
     position: relative;
+    font-family: 'OpenSans Light', sans-serif;
 }
 .advantages-list-1 ul li:before {
     content: '\2714';
@@ -344,17 +373,35 @@ header .to-order {
 .advantages-list-2 p {
     padding: 0 30px;
 }
+.advantages-list-2 .tagline {
+    font-family: 'OpenSans Light', sans-serif;
+    text-align: center;
+}
 
 /*  cocktails */
 
 .cocktails h2, .cocktails p {
     padding-left: 3%;
 }
+.cocktails p {
+    font-family: 'OpenSans Light', sans-serif;
+}
+
+/* how-it-work */
+
+.how-it-work p {
+    font-family: 'OpenSans Light', sans-serif;
+}
 
 /* to-buy-now-1 */
 
 .to-buy-now-1 img {
+    position: relative;
+    margin-bottom: -20%;
     width: 80%;
+}
+.to-buy-now-1 p, .to-buy-now-1 span {
+    font-family: 'OpenSans Light', sans-serif;
 }
 .to-buy-now-1 .product-cost {
     font-family: 'OpenSans Bold', sans-serif;
@@ -371,4 +418,68 @@ header .to-order {
     font-family: 'OpenSans Bold', sans-serif;
     font-size: 36px;
     color: #ff0000;
+}
+
+/* how-buy */
+
+.how-buy h2, .how-buy ol, .analogs {
+    padding-left: 30px;
+}
+.how-buy p, .how-buy li {
+    font-family: 'OpenSans Light', sans-serif;
+}
+.how-buy .container .row>div:first-child {
+    padding-top: 1%;
+}
+.how-buy ol {
+    counter-reset: li;
+}
+.how-buy ol li {
+    font-family: 'OpenSans Light', sans-serif;
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 25px;
+}
+.how-buy ol li:before {
+    content: counter(li);
+    counter-increment: li;
+    background-color: #007fff;
+    color: #ffffff;
+    font-family: 'OpenSans Bold', sans-serif;
+    display: block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+.how-buy .container .row>div:first-child p {
+    font-family: 'OpenSans Regular', sans-serif;
+}
+.how-buy .analogs span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background-color: #007fff;
+    color: #ffffff;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    text-align: center;
+    font-family: 'OpenSans Bold', sans-serif;
+    line-height: 20px;
+}
+
+/* reviews */
+
+.reviews p {
+    margin-bottom: 5px;
+    text-align: center;
+    font-family: 'OpenSans Light', sans-serif;
 }
