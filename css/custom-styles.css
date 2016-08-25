@@ -33,7 +33,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     font-size: 16px;
-    line-height: 1.3;
+    line-height: 1.4;
     color: #091726;
     font-family: 'OpenSans Regular', sans-serif;
 }
@@ -91,16 +91,28 @@ h2 {
     font-family: 'OpenSans Bold', sans-serif;
     font-size: 30px;
     font-weight: 100;
+    margin-bottom: 20px;
 }
 h3 {
     font-family: 'OpenSans Bold', sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 100;
+}
+p {
+    margin-bottom: 20px;
+}
+p:last-child {
+    margin-bottom: 0;
 }
 img {
     display: block;
     width: 100%;
     height: auto;
+}
+
+.container {
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 .to-order {
@@ -149,7 +161,15 @@ img {
 
 /* header */
 header[role="banner"] {
+    height: 100vh;
     background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header[role="banner"] .container, footer[role="contentinfo"] .container {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 .our-logo {
     display: block;
@@ -184,19 +204,146 @@ nav ul li a:hover {
 }
 .our-phone {
     display:inline-block;
-    font-family: 'OpenSans Bold', sans-serif;
+    font-family: 'OpenSans Regular', sans-serif;
     font-size: 20px;
     color: rgba(255, 255, 255, 1);
     margin-top: 28px;
+    font-weight: 600;
 }
 .header-bottom .our-phone {
     margin-top: 18px;
+}
+.header-banner {
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    padding-top: 8%;
 }
 header .to-order {
     width: 350px;
     height: 80px;
     font-size: 24px;
+    margin-right: 50px;
 }
 .no-blender, .no-juicer {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'OpenSans SemiBold', sans-serif;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.85);
+    position: relative;
+}
+.no-blender:hover, .no-juicer:hover {
+    color: rgba(255, 255, 255, 1);
+}
+.no-blender:before, .no-juicer:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 35px;
+    height: 33px;
+    background: transparent url('../source/images/sprite-white.png') no-repeat left center;
+    background-size: cover;
+    margin-right: 10px;
+}
+.no-juicer:before {
+    background-position: right center;
+    margin-left: 20px;
+}
 
+/* unique-helper */
+
+.unique-helper h2, .unique-helper p {
+    padding-left: 3%;
+}
+
+/* advantages-list-1 */
+
+.advantages-list-1 {
+    background: #f5faff url('../source/content/background-advantages.png') no-repeat center 200px;
+    background-size: auto;
+    padding-bottom: 5%;
+}
+.advantages-list-1 h2 {
+    text-align: center;
+    margin-bottom: 7%;
+}
+.advantages-list-1 ul li {
+    display: block;
+    width: 50%;
+    float: left;
+    margin-bottom: 5%;
+    padding-left: 40px;
+    position: relative;
+}
+.advantages-list-1 ul li:before {
+    content: '\2714';
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: #007fff;
+    color: #ffffff;
+    line-height: 25px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    text-align: center;
+}
+.advantages-list-1 ul li:nth-child(2n) {
+    text-align: right;
+    padding-right: 40px;
+}
+.advantages-list-1 ul li:nth-child(2n):before {
+    left: auto;
+    right: 0;
+}
+
+/* advantages-video */
+
+.advantages-video {
+    background-color: #f5faff;
+}
+.advantages-video .container {
+    padding-bottom: 10px;
+}
+.advantages-video p {
+    padding: 20px;
+}
+/* advantages-list-2 */
+
+.advantages-list-2 .container {
+    padding-top: 15px;
+    padding-bottom: 3%;
+}
+.advantages-list-2 .row {
+    margin-bottom: 30px;
+}
+.advantages-list-2 .advantage-item {
+    width: 285px;
+    height: 285px;
+    margin: 0 auto;
+    padding: 30px 0;
+    text-align: center;
+}
+.advantages-list-2 .item-left {
+    background: transparent url('../source/content/background-note-left.png') no-repeat center;
+}
+.advantages-list-2 .item-right {
+    background: transparent url('../source/content/background-note-right.png') no-repeat center;
+}
+.advantages-list-2 h3 {
+    margin-bottom: 10px;
+}
+.advantages-list-2 p {
+    padding: 0 30px;
+}
+
+/*  cocktails */
+
+.cocktails {
+    background-color: #f5faff;
+}
+.cocktails h2, .cocktails p {
+    padding-left: 3%;
 }

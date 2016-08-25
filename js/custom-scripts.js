@@ -4,6 +4,12 @@ $(document).ready(function () {
      ******* init scripts *********
      ******************************/
 
+    $('a[href^="#"]').click(function(){
+        var target = $(this).attr('href');
+        $('html, body').animate({scrollTop: $(target).offset().top}, 800);
+        return false;
+    });
+
     if ($(window).width() < '981'){
 
     } else {
