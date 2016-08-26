@@ -346,13 +346,11 @@ img {
     color: rgba(0, 127, 255, 1);
 }
 
-.block-content {
-    background-color: #ffffff;
-    z-index: 1;
-    position: relative;
-}
 .color-background {
     background-color: #f5faff;
+}
+#lg-counter {
+    display: none;
 }
 
 /* header */
@@ -473,6 +471,12 @@ header .to-order {
     margin-left: 20px;
 }
 
+main {
+    display: block;
+    position: relative;
+    background-color: #ffffff;
+    z-index: 1;
+}
 /* unique-helper */
 
 .unique-helper h2, .unique-helper p {
@@ -497,7 +501,7 @@ header .to-order {
 }
 .advantages-list-1 ul li {
     display: block;
-    width: 50%;
+    width: 40%;
     float: left;
     margin-bottom: 5%;
     padding-left: 40px;
@@ -522,6 +526,7 @@ header .to-order {
     text-align: center;
 }
 .advantages-list-1 ul li:nth-child(2n) {
+    float: right;
     text-align: right;
     padding-right: 40px;
 }
@@ -844,6 +849,9 @@ form .form-submit:hover {
 
 /* how-we-work */
 
+.how-we-work h2 {
+    text-align: center;
+}
 .how-we-work ul {
     margin-top: 4%;
     -moz-text-align-last: justify;
@@ -886,6 +894,9 @@ form .form-submit:hover {
 /* footer */
 
 footer[role="contentinfo"] {
+    display: block;
+    position: relative;
+    z-index: 1;
     background-color: #0a141f;
 }
 footer .container {
@@ -1217,8 +1228,10 @@ footer .container {
         border-radius: 15px;
     }
     .how-we-work ul li {
-        display: block;
-        margin: 20px auto;
+        width: 220px;
+    }
+    .how-we-work ul li p {
+        font-size: 14px;
     }
 }
 
@@ -1254,7 +1267,6 @@ footer .container {
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         border-radius: 10px;
-        top: auto;
     }
     .close-marker {
         display: block;
@@ -1281,6 +1293,10 @@ footer .container {
     .advantages-list-1 ul li, .advantages-list-1 ul li:nth-child(2n) {
         font-size: 12px;
     }
+    .how-we-work ul li {
+        display: block;
+        margin: 20px auto;
+    }
 }
 @media (max-width: 360px) {
     .our-logo {
@@ -1291,5 +1307,10 @@ footer .container {
     }
     .advantages-list-1 ul li, .advantages-list-1 ul li:nth-child(2n) {
         font-size: 11px;
+    }
+    .form-order {
+        width: 320px;
+        height: 300px;
+        overflow: scroll;
     }
 }
