@@ -655,11 +655,11 @@
                     <form action="mail-to-buy.php" id="form-to-buy-now" class="form-to-buy-now">
 
                         <label class="form-field-wrap">
-                            <input type="text" id="to-buy-now-name" class="form-field" placeholder="Имя" required/>
+                            <input type="text" id="to-buy-now-name" name="to-buy-now-name" class="form-field" placeholder="Имя" required/>
                         </label>
 
                         <label class="form-field-wrap">
-                            <input type="tel" id="to-buy-now-tel" class="form-field" placeholder="Телефон" required/>
+                            <input type="tel" id="to-buy-now-tel" name="to-buy-now-tel" class="form-field" placeholder="Телефон" required/>
                         </label>
 
                         <div class="custom-select">
@@ -670,13 +670,13 @@
                                 <li><span class="flag-kazahstan"></span>Казахстан</li>
                             </ul>
                             <label for="to-buy-now-country"></label>
-                            <input type="text" id="to-buy-now-country" class="hidden" value="Россия"/>
+                            <input type="text" id="to-buy-now-country" name="to-buy-now-country" class="hidden" value="Россия"/>
                         </div>
 
-                        <input type="checkbox" id="to-buy-full-cost" class="custom-checkbox" value="5999"/>
+                        <input type="checkbox" id="to-buy-full-cost" name="to-buy-full-cost" class="custom-checkbox" value="5999"/>
                         <label for="to-buy-full-cost" class="custom-checkbox-wrap">Ultramaxx Becherset (+ 1500 руб)</label>
 
-                        <button type="submit" class="form-submit">Заказать</button>
+                        <button type="submit" name="form-submit" class="form-submit">Заказать</button>
 
                         <div class="order-info">
                             <p>Оплата при получении! Немедленная отправка,<br> время доставки 1-3 рабочих дня</p>
@@ -798,11 +798,11 @@
         <div class="close-marker">&#10005;</div>
 
         <label class="form-field-wrap">
-            <input type="text" id="order-name" class="form-field" placeholder="Имя" required/>
+            <input type="text" id="order-name" name="order-name" class="form-field" placeholder="Имя" required/>
         </label>
 
         <label class="form-field-wrap">
-            <input type="tel" id="order-tel" class="form-field" placeholder="Телефон" required/>
+            <input type="tel" id="order-tel" name="order-tel" class="form-field" placeholder="Телефон" required/>
         </label>
 
         <div class="custom-select">
@@ -813,13 +813,13 @@
                 <li><span class="flag-kazahstan"></span>Казахстан</li>
             </ul>
             <label for="order-country"></label>
-            <input type="text" id="order-country" class="hidden" value="Россия"/>
+            <input type="text" id="order-country" name="order-country" class="hidden" value="Россия"/>
         </div>
 
-        <input type="checkbox" id="order-full-cost" class="custom-checkbox"/>
+        <input type="checkbox" id="order-full-cost" name="order-full-cost" class="custom-checkbox" value="5999"/>
         <label for="order-full-cost" class="custom-checkbox-wrap">Ultramaxx Becherset (+ 1500 руб)</label>
 
-        <button type="submit" class="form-submit">Заказать</button>
+        <button type="submit" name="form-submit" class="form-submit">Заказать</button>
 
         <div class="order-info">
             <p>Оплата при получении! Немедленная отправка,<br> время доставки 1-3 рабочих дня</p>
@@ -830,13 +830,26 @@
 
 </div>
 
+<div class="window-successful">
+    <div class="message-successful">
+        <p>Ваш заказ отправлен!</p>
+        <button>OK</button>
+    </div>
+</div>
+
+<div class="window-error">
+    <div class="message-error">
+        <p>Ваш заказ не отправлен!<br>Попробуйте еще раз!</p>
+        <button>OK</button>
+    </div>
+</div>
+
 <script src="js/jquery-3.1.0.min.js"></script>
 <script src="js/validatr.min.js"></script>
 <script src="js/jquery.maskedinput.min.js"></script>
 <script src="js/lightgallery.min.js"></script>
 <script src="js/lg-video.min.js"></script>
 <script src="js/jquery.downCount.js"></script>
-<script src="js/mail-script.js"></script>
 <script src="js/custom-scripts.js"></script>
 </body>
 </html>

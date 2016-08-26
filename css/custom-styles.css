@@ -911,7 +911,7 @@ footer .container {
 
 /* modal */
 
-.window-order {
+.window-order, .window-successful, .window-error {
     position: fixed;
     height: 100%;
     width: 100%;
@@ -921,9 +921,8 @@ footer .container {
     display: none;
     text-align: left;
     z-index: 11;
-    overflow: auto;
 }
-.form-order {
+.form-order, .message-error, .message-successful {
     position: absolute;
     width: 650px;
     height: 380px;
@@ -938,6 +937,41 @@ footer .container {
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
+}
+.message-error, .message-successful {
+    width: 320px;
+    height: 150px;
+    text-align: center;
+    padding: 15px 35px;
+}
+.message-successful {
+    height: 120px;
+}
+.message-error p, .message-successful p {
+    font-size: 18px;
+}
+.message-error button, .message-successful button {
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #007fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font-family: 'OpenSans Bold', sans-serif;
+    color: #ffffff;
+    border: 1px solid #007fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 10px auto 0;
+}
+.message-error button:hover, .message-successful button:hover {
+    color: #007fff;
+    border: 1px solid #007fff;
+    background-color: #ffffff;
+}
+.message-error button:active, .message-successful button:active {
+    color: #ff0000;
 }
 .form-order .form-submit {
     margin-right: 20px;
