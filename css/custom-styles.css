@@ -422,13 +422,13 @@ nav ul li a:hover {
 .our-phone {
     display:inline-block;
     font-family: 'OpenSans Regular', sans-serif;
-    font-size: 20px;
+    font-size: 19px;
     color: rgba(255, 255, 255, 1);
     margin-top: 28px;
     font-weight: 600;
 }
 .header-bottom .our-phone {
-    margin-top: 18px;
+    margin-top: 17px;
 }
 .header-banner {
     display: flex;
