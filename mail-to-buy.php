@@ -3,7 +3,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['to-buy-now-name'])) {$name = $_POST['to-buy-now-name'];}
     if (isset($_POST['to-buy-now-tel'])) {$phone = $_POST['to-buy-now-tel'];}
     if (isset($_POST['to-buy-now-country'])) {$country = $_POST['to-buy-now-country'];}
-    if (isset($_POST['to-buy-full-cost'])) {$sum = $_POST['to-buy-full-cost'];}
+    if (isset($_POST['to-buy-full-cost'])) {
+        $sum = $_POST['to-buy-full-cost'];
+    } else {
+              $sum = '5999';
+          }
     if (isset($_POST['formData'])) {$formData = $_POST['formData'];}
 
     $to = "biropka@gmail.com"; /*Укажите адрес, на который должно приходить письмо*/
