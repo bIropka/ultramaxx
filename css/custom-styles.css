@@ -126,7 +126,7 @@ img {
     font-family: 'OpenSans Bold', sans-serif;
     color: #ffffff;
     font-size: 24px;
-    padding: 20px 50px;
+    padding: 18px 50px 22px;
     -webkit-box-shadow: 0 3px 6px 2px rgba(0,127,255,0.2);
     -moz-box-shadow: 0 3px 6px 2px rgba(0,127,255,0.2);
     box-shadow: 0 3px 6px 2px rgba(0,127,255,0.2);
@@ -296,9 +296,6 @@ img {
     display: none;
 }
 
-.color-background {
-    background-color: #f5faff;
-}
 
 .invalid-field {
     border: 1px solid #ff0000!important;
@@ -349,11 +346,20 @@ img {
     color: rgba(0, 127, 255, 1);
 }
 
+.block-content {
+    background-color: #ffffff;
+    z-index: 1;
+    position: relative;
+}
+.color-background {
+    background-color: #f5faff;
+}
+
 /* header */
 header[role="banner"] {
     height: 100vh;
-    background-color: gray;
     position: relative;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 header[role="banner"] .container {
     padding-top: 0;
@@ -546,8 +552,8 @@ header .to-order {
     margin-bottom: 30px;
 }
 .recipes .recipes-item {
-    width: 285px;
-    height: 285px;
+    width: 280px;
+    height: 280px;
     margin: 0 auto;
     padding: 30px 0;
     text-align: center;
@@ -749,7 +755,7 @@ header .to-order {
     padding-right: 3%;
 }
 .for-whom-1 .to-order, .for-whom-3 .to-order, .for-whom-2 .to-order, .for-whom-4 .to-order {
-    padding: 15px 33px;
+    padding: 13px 33px 17px;
     font-size: 20px;
     font-family: 'OpenSans SemiBold', sans-serif;
 }
@@ -788,7 +794,7 @@ header .to-order {
     font-size: 24px;
 }
 form .form-submit {
-    padding: 15px 40px;
+    padding: 13px 40px 15px;
     margin: 10px 20px 0 0;
     display: inline-block;
     text-align: center;
@@ -1130,7 +1136,7 @@ footer .container {
         font-size: 36px;
     }
     .to-order, header .to-order {
-        padding: 15px 30px;
+        padding: 13px 30px 17px;
         font-size: 18px;
         margin-right: 30px;
     }
@@ -1222,7 +1228,7 @@ footer .container {
         font-size: 14px;
     }
     .header-bottom .our-phone {
-        font-size: 13px;
+        font-size: 11px;
     }
     h1 {
         font-size: 20px;
@@ -1261,7 +1267,7 @@ footer .container {
         right: 5px;
     }
     .form-order .form-submit {
-        padding: 8px 15px;
+        padding: 6px 15px 10px;
         -webkit-border-radius: 7px;
         -moz-border-radius: 7px;
         border-radius: 7px;
@@ -1279,7 +1285,7 @@ footer .container {
 }
 @media (max-width: 360px) {
     .header-bottom .our-phone {
-        font-size: 12px;
+        font-size: 10px;
     }
     .advantages-list-1 ul li, .advantages-list-1 ul li:nth-child(2n) {
         font-size: 11px;
