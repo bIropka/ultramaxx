@@ -1308,6 +1308,8 @@ footer .container {
     .advantages-list-1 ul li, .advantages-list-1 ul li:nth-child(2n) {
         font-size: 11px;
     }
+}
+@media (max-height: 450px) {
     .form-order {
         width: 320px;
         height: 300px;
