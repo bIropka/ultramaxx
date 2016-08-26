@@ -655,7 +655,7 @@
                     <form action="mail-to-buy.php" id="form-to-buy-now" class="form-to-buy-now">
 
                         <label class="form-field-wrap">
-                            <input type="text" id="to-buy-now-name" name="to-buy-now-name" class="form-field" placeholder="Имя" required/>
+                            <input type="text" id="to-buy-now-name" name="to-buy-now-name"  pattern="^[А-Яа-я]+$" class="form-field" placeholder="Имя" required/>
                         </label>
 
                         <label class="form-field-wrap">
@@ -798,7 +798,7 @@
         <div class="close-marker">&#10005;</div>
 
         <label class="form-field-wrap">
-            <input type="text" id="order-name" name="order-name" class="form-field" placeholder="Имя" required/>
+            <input type="text" id="order-name" name="order-name"  pattern="^[А-Яа-я]+$" class="form-field" placeholder="Имя" required/>
         </label>
 
         <label class="form-field-wrap">
