@@ -1,9 +1,9 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST['name-1'])) {$name = $_POST['order-name'];}
-    if (isset($_POST['phone-1'])) {$phone = $_POST['order-tel'];}
-    if (isset($_POST['phone-1'])) {$country = $_POST['order-country'];}
-    if (isset($_POST['phone-1'])) {$sum = $_POST['order-full-cost'];}
+    if (isset($_POST['order-name'])) {$name = $_POST['order-name'];}
+    if (isset($_POST['order-tel'])) {$phone = $_POST['order-tel'];}
+    if (isset($_POST['order-country'])) {$country = $_POST['order-country'];}
+    if (isset($_POST['order-full-cost'])) {$sum = $_POST['order-full-cost'];}
     if (isset($_POST['formData'])) {$formData = $_POST['formData'];}
 
     $to = "biropka@gmail.com"; /*Укажите адрес, на который должно приходить письмо*/
